@@ -1,232 +1,322 @@
-// --------------------------------- 14-03-2024 ---------------------------------
-
-// console.log(1 + 2) //3
-// console.log(10 + 20) //30
-// console.log(10.0 + 20.0) //30
-// console.log(10.5 + 20.5) //31
-// console.log(0.1 + 0.3) //0.4
-// console.log(0.7 + 0.3) //1
-// console.log(22/7) //3.142857142857143
-
-// +
-// '10' -> String
-// console.log(10 + '10') //1010
-// console.log(+10 + +'20') //30
-// console.log(+10 +'H' +'20') //10H20
-// console.log(10 + 'H') //10H   //NAN -> Not a Number
+// -------------------------------13-03-2024--------------------------------------
+// a = 10
+// b = 'nirav'
+// console.log(a+b)
 
 
-// --------------- Datatype ---------------
-// console.log(typeof (10)) //Number
-// console.log(typeof ('10')) //String
-// console.log(typeof true) //Boolean
-// console.log(typeof false) //Boolean
-// console.log(typeof 0.3) //Number
+// -------------------------------14-03-2024--------------------------------------
+// datatypes
 
-// console.log(typeof Nan) //Undefined INQ(Interview Question)
-// console.log(typeof null) //Object INQ(Interview Question)
-// console.log(typeof undefined) //Undefined INQ(Interview Question)
+// console.log(1+2)                 // 3
+// console.log(10.0 + 20)           // 30  float does not exist in javascript
+// console.log(10.0 + 20.0)         //30 
+// console.log(0.1+0.3)              // 0.4
+// console.log(0.7+0.3)              // 1 js only contain numbers
+// console.log(22/7)                 // 3.142857142857143  js give 15 decimals
 
-// console.log(typeof []) //Object (array is in form of object) INQ(Interview Question)
-// console.log(typeof {}) //Object INQ(Interview Question)
-// console.log(typeof function () {}) //Function INQ(Interview Question)
+// console.log(10 + '10')               // 1010
+// console.log('10' + '10')              // 1010 
+// console.log(typeof('10' + '10'))      // string
+// console.log(+'10')                   // 10    +sing before '10' it consider as number
+// console.log(typeof(+ '10'))           // number
 
-// console.log(typeof 1000n) //Bigint INQ(Interview Question)
-// console.log(typeof Symbol('h')) //Symbol
-// console.log(Symbol('h')) //Symbol(h)
-// console.log(Symbol) //[Function : Symbol]
+// console.log(+'10'+10)                // 20
+// console.log(+'10' + + '20')          // 30
+// console.log( + '10' + 'K' + '20')        // 10K20  'K' is not consider as number
+// console.log(typeof( + '10' + 'H' + '20'))   // string
 
-// ----------------------------------------
+// console.log(10 + +'H')                 // NaN  not a number
 
-// ------------------------------------------------------------------------------
+// console.log(typeof(10))                // number
+// console.log(typeof('10'))              // string
+// console.log(typeof(true))              // boolean
+// console.log(typeof(false))              // boolean
 
+// console.log(typeof(0.3))               // number
+// console.log(typeof(NaN))               //  number    NaN = not a number
+//                                         // but its type of number thats why number
 
-// --------------------------------- 18-03-2024 ---------------------------------
+// console.log(typeof(null))               // object
 
-// == Equality Value
-// === Equality Value + Datatpye
-
-// console.log(10 == 10) //true
-// console.log(10 == '10') //true
-// console.log(10 === '10') //false
-// console.log(10 == 'ten') //false
-
-// console.log(0.1 + 0.3 == 0.4) //true
-// console.log(true == 1) //true
-// console.log(true == '1') //true
-// console.log(true === '1') //false
-
-// console.log(10 + '10') //1010
-// console.log(10 + '10' == 10) //false
-// console.log(10 * '10' == 100) //true
-// console.log(10 / '10' == 1) //true
-// console.log(10 - '10' == 0) //true
-// console.log(10 / '10' == 1) //true
-// console.log(10 / '10' === 1) //true
-// console.log(10 / '10' == '1') //true
-// console.log(10 / '10' === '1') //false
+// console.log(typeof(undefined))          // undefiend
+// console.log(typeof([]))                 // object     -- array does not exist in js
+// console.log(typeof({}))                 // object
+// console.log(typeof(function(){}))       // function
+// console.log(typeof(1000n))              // bigint
+// console.log(typeof(Symbol('h')))        // symbol
+// console.log(Symbol('h'))                // symbol(h)
 
 
-// --------------- Relational Operator ---------------
+// // -------------------------------18-03-2024--------------------------------------
 
-// console.log(1>2) //false
-// console.log(2>3) //false
-// console.log(1>2>3) //false
-// console.log(1<2<3) //true
-// console.log(2<3) //true
+// // == equality value
+// // === equality value + datatype
+// console.log("10")                 // 10
+// console.log(10 == 10)             // true
+// console.log(10 == '10')           // true
+// console.log(10 === 10)            // true
+// console.log(10 === '10')          // false
 
-// console.log(3>2>1) //false
-// console.log(3>2) //true
-// console.log(2>1) //true
+// console.log(0.3+0.4 == 0.7)       // true
+// console.log(true == 1)            // true
+// console.log(true == '1')          // true
+// console.log(true === '1')         // false
 
-// console.log(3<2<1) //true
-// console.log(3<2) //false
-// console.log(2<1) //false
+// console.log(10 + '10' == 10)       // false
+// console.log(10 * '10' == 100)       // true
+// console.log(10 / 10 == 1)           // true
+// console.log(10 / '10' == 1)         // true
 
-// console.log(true == 1) //true
-// console.log(true == '1') //true
-// console.log(true === '1') //false
-// console.log(true === 1) //false
+// console.log(10 - '10' == 0)         // true
+// console.log(10 / '10' === 1)        // true
+// console.log(10 / '10' == '1')       // true
+// console.log(10 / '10' === '1')      // false
 
-// ----------------------------------------
+// // relational operator
+// console.log(1>2)                // false
+// console.log(2>3)                // false
+// console.log(1>2>3)              // false
+// console.log(1<2<3)              // true
 
-// ------------------------------------------------------------------------------
+// console.log(2<3)                // true
+// console.log(3>2>1)              // false
+// console.log(3>2)                // true
 
+// console.log(2>1)                // true
+// console.log(3<2<1)              // true
+// console.log(3<2)               // false
 
-// --------------------------------- 19-03-2024 ---------------------------------
+// console.log(2<1)               // false
+// console.log(true == 1)         // true
+// console.log(true == '1')        // true
+
+// console.log(true === '1')        // false
+// console.log(true === 1)           // false
+
+// -------------------------------19-03-2024--------------------------------------
 
 // let & var
-// Kywords
-// Declare Variable
+// --> keyword
+// --> used for declare variables
 
-// let intro in ES6 (Ecma Script 6)
+// let is introduced in es6
 
 // var a = 10;
-// console.log(a); //10
+// console.log(a);
 
-// a = 10
-// console.log(a); //10
+// console.log(a);   //Cannot access 'a' before initialization
+
+
+// a = 10;
+// console.log(a); 
 // var a;
 
-// console.log(a); //undefined
+// console.log(a);  // undefiend    after declare var its ok
 // var a;
 
-// console.log(a); //Cannot access 'a' before initialization
-// let a;
-
-// console.log(b); //b is not defined
-// let a;
-
+// console.log(a); 
+// let a;                 //Cannot access 'a' before initialization
+                         // after declare let its error
 
 // let a = 10;
 // let a = 20;
-// console.log(a); //Identifier 'a' has already been declared
+// console.log(a);         // Indentifier a is already declared                       
 
 // var a = 10;
 // var a = 20;
-// console.log(a); //last value declare in var 
-// ans -> 20
+// console.log(a);           // 20 
+
+// var a = 10;
+// {
+//     var a = 20;             // both var are same
+// }
+// console.log(a)             // 20
+
+// let a = 10;                // this let a is different
+// {
+//     let a = 20;               // this let a is different
+//     console.log(a);  //20     // this let a is accesible only inside for scop
+// }
+// console.log(a) ;         // 10
+
+// let a = 10;                   // this a is global
+// {
+//     let a = 20;                // this a is local to scop
+//     a = a * 2;
+//     console.log(a);    //40
+// }
+// console.log(a);          //10
+
+// var a = 10;                   // var is dose not follow scop rule
+// {
+//     var a = 20;                
+//     a = a * 2;
+//     console.log(a);    //40
+// }
+// console.log(a);     //40
+
 
 // var a = 10;
 // {
 //     var a = 20;
+//     a = a * 2;
+//     {
+//         a += 2;
+//         console.log(a);     // 42
+//     }
+//     console.log(a);        //42
 // }
-// console.log(a); //ans-> 20
-// var ma under ni value print thay che
+// console.log(a);                  //42
+
 
 // let a = 10;
-// { // a is local to scope
-//     let a = 20;
-//     a*=2;
-//     console.log(a); //40
-// }
-// console.log(a); //10
-// inside value print then outside value print
-
-// var a = 10;
-// { // a is local to scope
-//     var a = 20;
-//     a*=2;
-//     console.log(a); //40
-// }
-// console.log(a);  //40
-// Var inside value print and both value same ans inside or outside
-
-// var a = 10;
-// {
-//     var a = 20;
-//     a*=2;
-//     {
-//         a+=2
-//         console.log(a); //42
-//     }
-//     console.log(a); //42
-// }
-// console.log(a); //42
-
-// let a = 10;
 // {
 //     let a = 20;
-//     a*=2;
-//     {
-//         a+=2
-//         console.log(a); //42
+//     a = a * 2;
+//     {   
+//         a += 2;
+//         console.log(a);     // 42
 //     }
-//     console.log(a); //42
+//     console.log(a);        //42
 // }
-// console.log(a); //10
+// console.log(a);          //10
 
-// ------------------------------------------------------------------------------
+// -------------------------------20-03-2024--------------------------------------
 
-
-// --------------------------------- 21-03-2024 ---------------------------------
-
-// -> Function
-// -> Named Function
-
-// M-Imp -> If any number is addes with the number , this NaN
-// Null is an object
-
-// =>
-// function defination
-// function one()
-// {
-//     console.log("one")
+// Q-1 
+// let unit = 350;
+// let bill = 0;
+// if(unit <= 100){
+//     bill = unit * 0.6 
+//     console.log(bill + 50);
 // }
-// function calling
-// one() 
-// ans-> one
-
-// =>
-// function one(param1)
-// {
-//     return param1
+// else if(unit >100 && unit <= 300){
+//     bill = 60 + (unit-100)*0.8
+//     console.log(bill + 50)
 // }
-// console.log(one("one")) //one
 
-// function one(param1,param2,param3)
-// {
+// else{
+//     bill = 60 + 160 + (unit-300) * 0.9
+    
+//     if (bill > 300){
+//         bill = bill + bill*0.15
+//         console.log(bill + 50)
+//     }
+//     else{
+//         console.log(bill + 50)
+//     }
+    
+// }
+
+// Q-2
+
+// let sal = 25000;
+// let Gsal = 0;
+// if(sal < 5000){
+//     Gsal = sal * 0.28     
+// }
+
+// else if(sal <= 10000){
+//     Gsal = 1400 + (sal-5000)*0.42
+// }
+
+// else if(sal <= 15000){
+//     Gsal = 1400 + 2100 + (sal-10000)*0.55
+// }
+// else{
+//     Gsal = 1400 + 2100 + 2750 + (sal-15000) * 0.7)
+// }
+// console.log(Gsal)
+
+// Q-3
+
+// let income = 5200;
+// let tax = 0;
+// if(income < 2500){
+//    tax = 0;
+// }
+// else if(income < 5000){
+//     tax = (income-2500) * 0.1
+// }
+// else if(income <= 10000){
+//     tax = 250 + (income - 5000) * 0.2
+// }
+// else if(income > 10000){
+//     tax = 250 + 1000 + (income - 10000) * 0.3
+// }
+//     console.log("Tax :"+tax);
+
+// Q - 4
+
+// let math = 21;
+// let che = 30;
+// let phy = 28;
+
+// let total = math + che + phy
+
+// let ave = total / 3
+
+// if ( ave >= 75){
+//     console.log("A Greade");
+// }
+// else if(ave < 75 && ave >= 60){
+//     console.log("B Greade");
+// }
+// else if(ave < 60 && ave >= 45){
+//     console.log("C Greade");
+// }
+// else if(ave < 45 && ave >= 35){
+//     console.log("D Greade");
+// }
+// else{
+//     console.log("  falied ");
+// }
+
+// Q - 6
+
+// let x = 500;
+// let y = 2000;
+// if(x < 2000 || x > 3000){
+//     console.log(" X ");
+// }
+// else if(y>100 && y<500){
+//     console.log(" Y ");
+// }
+
+// -------------------------------21-03-2024--------------------------------------
+// functions
+
+// function one(){
+//     console.log("Hello world");
+// }
+// one()
+
+// function one(param1){
+//     return param1;
+// }
+// console.log(one("one"));
+
+// function one(param1,param2,param3){
 //     return param1 + param2 + param3
 // }
-// console.log(one("one","two","three")) //onetwothree
-// console.log(one("one","two","three","four")) //onetwothree
-// console.log(one("one","two")) //onetwoundefined
-// console.log(one("one","two",undefined)) //onetwoundefined
-// console.log(one(null,"two",undefined)) //nulltwoundefined
-// console.log(one("one"," ","three")) //one three
-// console.log(one(null,NaN,undefined)) //NaN
-// console.log(one(10,NaN,12)) //NaN
-// console.log(one(10,21,undefined)) //NaN
-// console.log(one(10,undefined,21)) //NaN
-// console.log(one(10,null,21)) //31
-// console.log(one(10,21,null)) //31
-// console.log(one('10',null,21)) //10null21
-// console.log(one(10,'21',null)) //1021null
-
-// ------------------------------------------------------------------------------
+// console.log(one("one","two","three"));            //onetwothree
+// console.log(one("one","two","three","four"));     //onetwothree 
+// console.log(one("one","two"));                     //onetwoundefiend
+// console.log(one("one","two",undefined));          //onetwoundefined
+// console.log(one(null,"two",undefined));          //nulltwoundefined
+// console.log(one(null," ",undefined));            //null undefined     space as patameter
+// console.log(one(null,NaN,null));                //NaN
+// console.log(one(10,NaN,12));                    //NaN
+// console.log(one(10,21,undefined));              //NaN
+// console.log(one(10,undefined,21));              //NaN
+// console.log(one(10,null,21));                   //31
+// console.log(one(10,21,null));                   //31
+// console.log(one('10',null,21));                   //10null21
+// console.log(one(10,'21',null));                   //1021null
 
 
-// --------------------------------- 22-03-2024 ---------------------------------
+
+// -------------------------------22-03-2024--------------------------------------
 
 // function one(){
 //     return "Hello"
@@ -275,410 +365,767 @@
 // console.log(three()())           //[Function: one]
 // console.log(three()()())         //Hello
 
-// ------------------------------------------------------------------------------
+// --------------------------------- 23-03-2024 ---------------------------------
 
+// -> function as a parameter 
 
-// --------------------------------- 27-03-2024 Array ---------------------------
-
-// Javascript check the value.
-// collection of Element
-// index start from 0(zero)
-// [] same symbol
-
-// let arr1 = [1,2,'three',4,'5',6,'seven',"8","9",10]
-// console.log(arr1) // [1,2,'three',4,'5',6,'seven','8','9',10]
-
-// console.log(arr1[0]) //1 (index)
-// console.log(arr1[3]) //4 (index)
-
-// console.log(arr1['0']) //1 (value check)
-// console.log(arr1['3']) //4 (value check)
-
-// console.log(arr1[1.5]) //undefined (becoz value is not given in array)
-
-// arr1[1.5] = 1.5 //(value add in arr1) / (key value form)
-// console.log(arr1[1.5]) //1.5
-// console.log(arr1) //[1,2,'three',4,'5',6,'seven','8','9',10,'1.5':1.5]
-
-// console.log(arr1[name]) //name is not defined
-// arr1['name'] = 'nikhil' //(value add in arr1) / (key value form)
-// console.log(arr1['name']) //nikhil
-// console.log(arr1) //[1,2,'three',4,'5',6,'seven','8','9',10,'1.5':1.5,name: 'nikhil']
-
-// console.log(arr1[-1]) //undefined
-// arr1[-1] = -1 //(value add in arr1) / (key value form)
-// console.log(arr1.length) //10 (length is a property not a function)
-// console.log(typeof (arr1)) //object
-
-// Array Defination -->
-// The Array object, as with arrays in other programming languages,enables storing
-// a collection of multiple items under a single variable name,and has members for
-// performing common array operations.
-
-// Length Defination -->
-// The length data property of an Array instance represents the number of elements
-// in that array. The value is an unsigned, 32-bit integer that is always numerically
-// greater than the highest index in the array.
+// function one()
+// {
+//     return "Hello One"
+// }
+// function two()
+// {
+//     return "Hello Two"
+// }
+// function three(param1,param2)
+// {
+//     console.log(param1(),param2())      // one and two become parameter and after
+// }                                       // that breackate () means function called
+// three(one,two)
 
 // ------------------------------------------------------------------------------
 
+// -------------------------------27-03-2024--------------------------------------
 
-// --------------------------------- 28-03-2024 ---------------------------------
+// Arrays
+// index start from zero 0
+// symbol = []
 
-// let arr1 = [1,2,3,4,5,6]
-// console.log(arr1) //[ 1, 2, 3, 4, 5, 6 ]
-// arr1[10] = 11
-// console.log(arr1[7])
-// arr1[7] = undefined 
-// console.log(arr1[8] == undefined) //true
-// console.log(arr1[8] === undefined) //true
+let arr = [1,2,'three',4,'5',6,'seven',"8","9",10]
 
-// arr1[7] = null
-// console.log(arr1) //[ 1, 2, 3, 4, 5, 6, <1 empty item>, null ]
+console.log(arr);             //[1,2,'three',4,'5',6,'seven',"8","9",10]
+console.log(arr[0]);          // 1
+console.log(arr[3]);          // 4
+console.log(arr['0']);        // 1       //consider value
+console.log(arr['3']);        // 4
 
-// undefined , null , NaN
-
-// console.log(undefined == undefined) //true
-// console.log(undefined === undefined) //true
-
-// console.log(null == null) //true
-// console.log(null === null) //true
-
-// console.log(NaN == NaN) //false
-// console.log(NaN === NaN) //false
-
-// console.log(undefined == null) //true
-// console.log(undefined === null) //false
-
-// console.log(undefined == NaN) //false
-// console.log(undefined === NaN) //false
-
-// console.log(null == NaN) //false
-// console.log(null === NaN) //false
-
-// ------------------------------------------------------------------------------
+console.log(arr[1.5]) ;        // undefined
 
 
-// -------------------- 30-03-2024 Push,Pop,Shift,Unshift -----------------------
+arr[1.5] = 1.5
 
-// let arr1 = [10,20,30,40]
+console.log(arr[1.5]);          // 1.5       this will store in key value formate
+                                //           key is 1.5 and value is 1.5
 
-// Push :- Value insert last
+arr['name'] = 'Nirav';
+// console.log(arr[name]);             // name is not defined
 
-// => Define :- Push
-// -> The push() method of Array instances adds the specified elements to the end of an 
-// array and returns the new length of the array.
+console.log(arr['name']);             // "Nirav"
 
-// => Syntax :- 
+console.log(arr[-1])                 // undefined
+
+arr[-1] = 2.5
+console.log(arr[-1])                 // 2.5
+
+console.log(typeof(arr))         // object
+
+console.log(arr.length)           //10 length is property not function
+
+//Defination :- the Array object as with arrays in other programming language
+//              enables storing a collection of multiple items under a single
+//        variable name, and has member for performing common array operations
+
+// the length data property of an Array instance represents the number of 
+// element in that array
+
+// -------------------------------28-03-2024--------------------------------------
+
+// let arr = [1,2,3,4,5,6]
+
+// console.log(arr);
+
+// arr[10] = 11
+
+// console.log(arr);         //  [ 1, 2, 3, 4, 5, 6, <4 empty items>, 11 ]
+
+// console.log(arr[7]) ;       // at 7 position value is empty but valu is undefined
+//                            // so result is undefined
+// arr[7] = undefined
+
+// console.log(arr);       
+// // [ 1, 2, 3, 4, 5, 6, <1 empty item>, undefined, <2 empty items>, 11 ]
+
+// console.log(arr[8] == undefined)          //true
+// console.log(arr[8] === undefined)         //true
+
+// arr[7] = null
+
+// console.log(arr)
+// //[ 1, 2, 3, 4, 5, 6, <1 empty item>, null, <2 empty items>, 11 ]
+
+// // undefined null NaN
+
+// console.log(undefined == undefined)       //true
+// console.log(undefined === undefined)      // true
+
+
+// console.log(null == null)      // true
+// console.log(null === null)      // true
+
+
+// console.log(NaN === NaN)      // false     
+// // becoz NaN is type of number but not number so value is not same
+// console.log(NaN === NaN)      // false 
+// becoz NaN is type of number but not number so value is not same
+// and type is same but value is not same thats why false (===)
+// if value and data typer both same than (===) return true
+
+// console.log(undefined == null);      // true
+// console.log(undefined === null)      // false
+
+
+// console.log(undefined === NaN)      // false
+// console.log(undefined === NaN)      // false
+
+
+// console.log(NaN === null)      // false
+// console.log(NaN === null)      // false
+
+
+// the length data property of an Array instance represents the number of 
+// element in that array
+
+// -------------------------------30-03-2024--------------------------------------
+
+// push function
+
+// Defination: The push() method of Array instances adds the specified elements
+//              to the end of an array and returns the new length of the array.
+
+// syntax
 // push()
-// push(element1)
-// push(element1, element2)
-// push(element1, element2, /* …, */ elementN)
+//push()
+//push(elemnt1)
+//push(elemnt1,element2)
+//push(elemnt1,element2,.....elementN)
 
-// => Parameter :-
-// element1, …, elementN
-// The element(s) to add to the end of the array.
-
-// => Return Value :-
+//Return value
 // The new length property of the object upon which the method was called.
 
-// arr1.push(50)
-// console.log(arr1) //[ 10, 20, 30, 40, 50 ]
+// let ar1=[10,20,30,40,50]
+// ar1.push(80)
+// console.log(ar1)                  // [ 10, 20, 30, 40, 50, 80 ]
+// console.log(ar1.push(120))        // 7 because its returns new length
 
-// console.log(arr1.push(60)) //5
-// console.log(arr1) //[ 10, 20, 30, 40, 60 ]
+// ar1.push(21,22,23)
+// console.log(ar1)                  // [ 10, 20, 30, 40, 50, 80, 120, 21, 22, 23 ]
 
-// console.log(arr1.push(60,70,80)) //7
-// console.log(arr1) //[10,20,30,40,60,70,80]
+//------------------------
 
-// -------------------
+// pop function
 
-// Pop :- Value delete last
+//Defination : The pop() method of Array instances removes the last element 
+//            from an array and returns that element. This method changes
+//             the length of the array.
 
-// => Define :- Pop
-// -> The pop() method of Array instances removes the last element from an 
-// array and returns that element. This method changes the length of the array.
-
-// => Syntax :-
-// pop()
-
-// => Return Value :-
+//Return value
 // The removed element from the array; undefined if the array is empty.
 
-// console.log(arr1.pop()) //40
-// console.log(arr1) //[10,20,30]
+// let ar1=[10,20,30,40,50]
+// ar1.pop()
+// console.log(ar1)             //[ 10, 20, 30, 40 ]
+// console.log(ar1.pop())      // 40  -- returns last removed value
 
-// -------------------
+//------------------------
 
-// Shift :- Value delete first
+// shift function
 
-// => Define :- Shift
-// -> The shift() method of Array instances removes the first element from an 
-// array and returns that removed element. This method changes the length of the array.
+// Defination: The shift() method of Array instances removes the first 
+//             element from an array and returns that removed element. 
+//              This method changes the length of the array.
 
-// => Syntax :-
-// shift()
-
-// => Return Value :-
+//Return value
 // The removed element from the array; undefined if the array is empty.
 
-// console.log(arr1.shift()) //10
-// console.log(arr1) //[20,30,40]
 
-// --------------------
+// let ar1=[10,20,30,40,50]
+// ar1.shift()
+// console.log(ar1)             //[ 20, 30, 40,50 ]
+// console.log(ar1.shift())      // 20  -- returns first removed value
 
-// Unshift :- Value insert first
+//------------------------
 
-// => Define :- Unshift
-// -> The unshift() method of Array instances adds the specified 
-// elements to the beginning of an array and returns the new length of the array.
+// unshift function
 
-// => Syntax :-
-// unshift()
-// unshift(element1)
-// unshift(element1, element2)
-// unshift(element1, element2, /* …, */ elementN)
+// Defination: The unshift() method of Array instances adds the specified 
+//             elements to the beginning of an array and returns the new 
+//             length of the array.
 
-// => Parameter :-
-// element1, …, elementN
-// The elements to add to the front of the arr.
+//syntax
+//unshift()
+//unshift(element1)
+//unshift(element1,element2)
+//unshift(element1,element2,......,elementN)
 
-// => Return Value :-
+//Return value
 // The new length property of the object upon which the method was called.
 
-// console.log(arr1.unshift(9)) //5
-// console.log(arr1) //[9,10,20,30,40]
+// let ar1=[10,20,30,40,50]
+// ar1.unshift()
+// console.log(ar1.unshift())    // 5 -- returns new lenght (no element so new lenght is same as old)        
+// console.log(ar1)             //[ 10,20, 30, 40,50 ]
 
-// console.log(arr1.unshift(7,8,9)) //7
-// console.log(arr1) //[7,8,9,10,20,30,40]
+// ar1.unshift(26)
+// console.log(ar1)             //[26,10,20, 30, 40,50 ]
+// console.log(ar1.unshift(211))      // 7  -- returns new lenght
 
+// ar1.unshift(26,45,23)
+// console.log(ar1)             // [ 26, 45, 23, 211, 26, 10, 20, 30, 40, 50 ]
 
-// --------------- Splice ---------------
+//------------------------
 
-// => Define :- Splice
-// ->The splice() method of Array instances changes the contents of an array by 
-// removing or replacing existing elements and/or adding new elements in place.
+//Defination : The splice() method of Array instances changes the contents of 
+//             an array by removing or replacing existing elements and/or 
+//             adding new elements in place.
 
-// => Syntax :-
-// splice(start)
-// splice(start, deleteCount)
-// splice(start, deleteCount, item1)
-// splice(start, deleteCount, item1, item2)
-// splice(start, deleteCount, item1, item2, /* …, */ itemN)
+//syntax
+//splice()
+//splice(start)
+//splice(start,deletcount)
+//splice(start,deletcount,item1)
+//splice(start,deletcount,item1,item2)
+//splice(start,deletcount,item1,item2,......itemN)
 
-// => Parameter :-
-// start
-// Zero-based index at which to start changing the array, converted to an integer.
+//Return value
+//An array containing the deleted elements.
+//If only one element is removed, an array of one element is returned.
+//If no elements are removed, an empty array is returned.
 
-// Negative index counts back from the end of the array — if -array.length <= start < 0, start + array.length is used.
-// If start < -array.length, 0 is used.
-// If start >= array.length, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
-// If start is omitted (and splice() is called with no arguments), nothing is deleted. This is different from passing undefined, which is converted to 0.
-// deleteCount Optional
-// An integer indicating the number of elements in the array to remove from start.
+// let ar1 = [10,20,30,40,50,60,70,80,90,100]
 
-// If deleteCount is omitted, or if its value is greater than or equal to the number of elements after the position specified by start, then all the elements from start to the end of the array will be deleted. However, if you wish to pass any itemN parameter, you should pass Infinity as deleteCount to delete all elements after start, because an explicit undefined gets converted to 0.
+// console.log(ar1.splice())                    //[]
+// console.log(ar1.splice(5))                   //[ 60, 70, 80, 90, 100 ]
+// console.log(ar1.splice(5,2))                 //[ 60, 70 ]
+// console.log(ar1.splice(5,2,600,700,800))        //[ 60, 70 ]
 
-// If deleteCount is 0 or negative, no elements are removed. In this case, you should specify at least one new element (see below).
+// console.log(ar1)                           
+//  [ 10, 20, 30, 40, 50, 600, 700, 800, 80, 90, 100 ]
 
-// item1, …, itemN Optional
-// The elements to add to the array, beginning from start.
+// console.log(ar1.splice(0))                    
+// [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ]
 
-// If you do not specify any elements, splice() will only remove elements from the array.
-
-// => Return Value :-
-// -> An array containing the deleted elements.
-// -> If only one element is removed, an array of one element is returned.
-// ->If no elements are removed, an empty array is returned.
-
-// let arr1 = [10,20,30,40,50,60,70,80,90,100]
-//  0   1   2   3   4   5   6   7   8   9
-//  10  20  30  40  50  60  70  80  90  100
-//  -10 -9  -8  -7  -6  -5  -4  -3  -2  -1
-
-// console.log(arr1.splice(5)) //[ 60, 70, 80, 90, 100 ]
-// console.log(arr1.splice(5,2)) //[ 60, 70 ]
-
-// console.log(arr1.splice(5,2,600,700,800))
-// console.log(arr1) //[ 10,  20,  30, 40, 50, 600, 700, 800, 80, 90, 100 ]
-
-// console.log(arr1.splice(0)) //[10,20,30,40,50,60,70,80,90,100]
-// console.log(arr1.splice(0,1)) //[10]
-// console.log(arr1.splice(2,15)) //[30,40,50,60,70,80,90,100]
-// console.log(arr1.splice(3,3)) //[40,50,60]
-
-// --------------------------------------
-
-// ------------------------------------------------------------------------------
+// console.log(ar1)                              //[]  
 
 
-// --------------------------------- 01-04-2024 ---------------------------------
+// console.log(ar1.splice(0,1))                   // [10]
 
-// --------------- Splice ---------------
+// console.log(ar1.splice(7))                   // [80,90,100]
 
-// let arr1 = [10,20,30,40,50,60,70,80,90,100]
-//  0   1   2   3   4   5   6   7   8   9
-//  10  20  30  40  50  60  70  80  90  100
-//  -10 -9  -8  -7  -6  -5  -4  -3  -2  -1
+// console.log(ar1.splice(2,15))    
+// //[ 30, 40, 50, 60, 70, 80, 90, 100 ]
 
-// console.log(arr1.splice(-3)) //[80,90,100]
-// console.log(arr1.splice(-5,2)) //[60,70]
-// console.log(arr1.splice(-1,9)) //[100]
-// console.log(arr1.splice(-5,5)) //[60,70,80,90,100]
+// console.log(ar1)                          //  [10,20]
 
-// console.log(arr1.splice(-5,3,300,200))
-// console.log(arr1) //[10,20,30,40,50,300,200,90,100]
+//  0    1    2    3    4    5    6    7    8     9
+//  10   20   30   40   50   60   70   80   90   100
+// -10   -9   -8   -7   -6   -5   -4   -3   -2    -1
 
-// console.log(arr1.splice(-5,3,400,300,200,100))
-// console.log(arr1) //[10,20,30,40,50,400,300,200,100,90,100]
+// console.log(ar1.splice(-3))                 // [80,90,100]
+// console.log(ar1.splice(-5,2))                 // [60,70]
+// console.log(ar1.splice(-1,9))                 // [100]
+// console.log(ar1.splice(-5,5))                 // [60,70,80,90,100]
 
-// --------------------------------------
+// console.log(ar1.splice(-3,3,300))       
+// console.log(ar1)                           
+// [ 10, 20, 30, 40, 50, 60, 70, 300 ]
 
-
-// --------------- Slice ---------------
-
-// => Define :- Slice
-// -> The slice() method of Array instances returns a shallow copy of a 
-// portion of an array into a new array object selected from start to end 
-// (end not included) where start and end represent the index of items in 
-// that array. The original array will not be modified.
-
-// => Syntax :-
-// slice()
-// slice(start)
-// slice(start, end)
-
-// -> Deep Copy
-// -> Shallow Copy
-
-// => Parameter :-
-// start Optional
-// Zero-based index at which to start extraction, converted to an integer.
-
-// Negative index counts back from the end of the array — if -array.length <= start < 0, start + array.length is used.
-// If start < -array.length or start is omitted, 0 is used.
-// If start >= array.length, nothing is extracted.
-// end Optional
-// Zero-based index at which to end extraction, converted to an integer. slice() extracts up to but not including end.
-
-// Negative index counts back from the end of the array — if -array.length <= end < 0, end + array.length is used.
-// If end < -array.length, 0 is used.
-// If end >= array.length or end is omitted, array.length is used, causing all elements until the end to be extracted.
-// If end implies a position before or at the position that start implies, nothing is extracted.
-
-// => Return Value :-
-// A new array containing the extracted elements.
-
-// let arr1 = [10,20,30 ,40,50,60,70,80,90,100]
-//  0   1   2   3   4   5   6   7   8   9
-//  10  20  30  40  50  60  70  80  90  100
-//  -10 -9  -8  -7  -6  -5  -4  -3  -2  -1
-
-// ----- >Deep Copy< -----
-// arr_1 = arr1
-// arr_1[10]=200
-// console.log(arr_1) //[10,20,30,40,50,60,70,80,90,100,200]
-
-// arr1.splice(2,2)
-// console.log(arr1) //[10,20,30,50,60,70,80,90,100]
-
-// ----- >Shallow Copy< -----
-// arr_1 = arr1.slice()
-// arr_1[10]=200
-// console.log(arr_1) //[10,20,30,40,50,60,70,80,90,100,200]
-
-// arr1.splice(2,2)
-// console.log(arr1) //[10,20,30,50,60,70,80,90,100]
-// --------------------------------------
-
-// console.log(arr1.slice(5)) //[ 60, 70, 80, 90, 100 ]
-// console.log(arr1.slice(1,6)) //[ 20, 30, 40, 50, 60 ]
-// console.log(arr1.slice(-6)) //[ 50, 60, 70, 80, 90, 100 ]
-// console.log(arr1.slice(-3,-6)) //[]
-// console.log(arr1.slice(-6,9)) //[ 50, 60, 70, 80, 90 ]
-
-// ------------------------------------------------------------------------------
+// console.log(ar1.splice(-5,3,300,200))                 // [80,90,100]
+// console.log(ar1)          
+//[ 10, 20, 30, 40, 50, 300, 200, 90, 100 ]              
 
 
-// --------------------------------- 02-04-2024 ---------------------------------
+//------------------------
+//slice function
 
-// => Spread Operator
-// (... -> Spread Operator) alag alag pade
-
-// let arr1 = [10,20,30,40]
-// let arr2 = [10,20,30,40]
-// let arr3;
-
-// console.log([...arr1,...arr2]) //[10,20,30,40,10,20,30,40]
-// console.log([arr1,arr2]) //[[10,20,30,40],10,20,30,40]
-
-// arr3 = [...arr1,50] //[10,20,30,40,50] , add 50 backside
-// arr3 = [50,...arr1] //[50,10,20,30,40] , add 50 frontside
-// arr3 = [arr1,...arr2] //[[10,20,30,40],10,20,30,40]
-// console.log(arr3)
+// Defination: The slice() method of Array instances returns a shallow copy of 
+//             a portion of an array into a new array object selected from
+//              start to end (end not included) where start and end represent
+//              the index of items in that array. The original array will not
+//              be modified.
 
 
-// let arr1 = [10,20,30,40]
-// let arr2 = [60,70,80,90]
+//Syntax
+//slice()
+//slice(start)
+//slice(start, end)
 
-// let arr3 = arr1.slice(1,3)
-// arr3.push(100)
-// console.log(arr3) // [ 20, 30, 100 ]
+// let ar1 = [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ]
 
-// let arr3 = [...arr1]
-// console.log(arr3) //[ 10, 20, 30, 40 ]
+//  0    1    2    3    4    5    6    7    8     9
+//  10   20   30   40   50   60   70   80   90   100
+// -10   -9   -8   -7   -6   -5   -4   -3   -2    -1
 
-// arr3.push(100)
-// console.log(arr1) //[ 10, 20, 30, 40 ]
-// console.log(arr3) //[ 10, 20, 30, 40, 100 ]
+//slice does not incluede last index
+// always from left to right --->
 
-// ------------------------------------------------------------------------------
+// console.log(ar1.slice(5))            //[ 60, 70, 80, 80, 90, 100 ]
+// console.log(ar1)                   // 10, 20, 30, 40, 50, 60, 70, 80, 80, 90, 100 ]
+
+// console.log(ar1.slice(1,6))            // [20, 30, 40, 50, 60 ]
+
+// console.log(ar1.slice(-6))            // [ 60, 70, 80, 80, 90, 100 ]
+// console.log(ar1.slice(-3,-6))            // []
+// console.log(ar1.slice(-6,9))            // [ 50, 60, 70, 80, 90 ]
+
+// console.log(ar1.slice(-3,15))            // [ 80, 90, 100 ]
+
+// console.log(ar1.slice(3,-4))            // [ 40, 50, 60 ]
+
+// console.log(ar1.slice(-5,3))            // []
 
 
-// --------------------------------- 03-04-2024 ---------------------------------
+//------------------------
+//Deep copy
 
-// => Functions in JavaScript :-
+// let ar1 = [10,20,30,40]
+// let ar2 = ar1
+// ar2.push(90)                        //when we change into ar 2 but 
+//                                     // becaause of deep copy it will also change to ar1
+// console.log(ar1)                //[ 10, 20, 30, 40, 90 ]
+// console.log(ar2)                //[ 10, 20, 30, 40, 90 ]
 
-// 1) Named Function
-// 2) Anonymous Function 
-// 3) Rest Parameter in Function
-// 4) Default Parameter in Function
-// 5) Optional Parameter in Function
-// 6) Generators Function
-// 7) Construction Function
-// 8) IIFE (Immediate Invokable Function Expression)
 
-// --------------------
+//------------------------
+//shallow copy
 
-// 2) Anonymous Function :-
+// let ar1 = [10,20,30,40]
+// let ar2 = ar1.slice()
+// ar2.push(90)                        //when we change into ar 2 only change  
+//                                     // into ar2 because shallow copy
+// console.log(ar1)                //[ 10, 20, 30, 40 ]
+// console.log(ar2)                 //[ 10, 20, 30, 40, 90 ]
 
-// Function Defination
-// -> let/var/const Variable-Name = (arg1,arg2,arg3...)=>{
+// -------------------------------02-04-2024--------------------------------------
+// spread operator
+
+// let ar1 = [10,20,30,40]
+// let ar2 = [50,70,80,90]
+
+// let ar3;
+// console.log([ar1,ar2])          //[ [ 10, 20, 30, 40 ], [ 50, 70, 80, 90 ] ]
+// console.log([...ar1,...ar2])    //[ 10, 20, 30, 40, 50, 70, 80, 90 ]
+
+// ar3 = [...ar1]
+// console.log(ar3)               //[ 10, 20, 30, 40 ]
+
+// ar3 = [50,...ar1]
+// console.log(ar3)               //[ 50, 10, 20, 30, 40 ]
+
+// ar3 = [...ar1,50]
+// console.log(ar3)               //[ 10, 20, 30, 40, 50 ]
+
+// ar3 = [...ar1,...ar2]
+// console.log(ar3)           //[ 10, 20, 30, 40, 50, 70, 80, 90 ]
+
+
+// let ar1 = [10,20,30,40]
+// let ar2 = [50,70,80,90]
+
+// let ar3 = [...ar1]
+// ar3.push(12)
+// console.log(ar3)             //[ 10, 20, 30, 40, 12 ]
+
+// reverse function
+// let str1 = [50,70,80,90]
+// let str2 = str1.reverse()
+// console.log(str2)                       //[ 90, 80, 70, 50 ]
+// console.log(str1.reverse())          //[ 90, 80, 70, 50 ]
+
+//
+// -------------------------------03-04-2024--------------------------------------
+
+// Functions
+//1) Named Function
+//2) Anonymus Function
+//3) rest parameter in Function
+//4) default parameter in Function
+//5) optional parameter in Function
+//6) generators Function
+//7) constructor Function
+//8) IIFE Function
+
+// Anonymus Function
+
+// let/var/const = variable-name () => {
+//     function body
 // }
 
-// Function calling
-// Variable-Name(param1,param2,param3)
+// //calling function by variable name
+// variable-name()
 
-// -> let fun_one = ()=>{
-//     return "one";
+//examples
+
+// let fun_one = ()  => {
+//     return "test"
 // }
-// console.log(fun_one) //[Function: fun_one]
+// console.log(fun_one)                 //[Function: fun_one]
+// console.log(fun_one())                // test
 
-// only for single statment
-// let fun_one = ()=> "Hello,One"
-// console.log(fun_one()) //Hello,One
+// one liner aerow function in anonymus function
+
+// let fun_one = () => "hello"
+// console.log(fun_one())                 // hello
+
+// this is one liner function which is used when onely one this need to returns
 
 // let fun_one = (arg1) => arg1
-// console.log(fun_one("param1,one")) //param1,one
+// console.log(fun_one("Ginni"))           // Ginni
 
-// let dosum = (arg1,arg2) => arg1+arg2
-// console.log(dosum(10,20)) //30
+// let fun_one = (arg1,arg2) => arg1+arg2
+// console.log(fun_one(10,30))                 // 40
 
-// let dosum = (arg1,arg2) =>{
-//     console.log(arg1+arg2)
+// -------------------------------05-04-2024--------------------------------------
+
+// Anonymus function
+// Ex 1)
+
+// let fun_one = () => {
+//     return () =>{    
+//     }
+// }             
+// console.log(fun_one())                // [Function (anonymous)]
+// console.log(fun_one()())                // undefine
+
+// Ex 2)
+
+// let fun_one = () => {
+//     return () =>{ 
+//         console.log("HII Nirav")   
+//     }
+// }             
+// // console.log(fun_one())                // [Function (anonymous)]
+// // fun_one()()                           // Hii Nirav
+// console.log(fun_one()())                // undefined coz inside function return nothing
+
+// Ex 3)
+
+// let fun_one = () => {
+//     return () =>{ 
+//         return () =>{ 
+//            return "Hii Parth"
+//         }
+//     }
+// }             
+
+// console.log(fun_one())                  // [Function (anonymous)]
+// console.log(fun_one()())                 // [Function (anonymous)] 
+// console.log(fun_one()()())               // Hii Parth 
+
+
+// Anonymus function as a parameter
+
+// Ex 1)
+
+// let fun_one = (arg1) => {
+//     console.log(arg1)                      //[Function (anonymous)]
+//     console.log(arg1())                      //param1 
 // }
-// dosum(100,30) //130
-
-// ------------------------------------------------------------------------------
+// fun_one(()=> "param1")   
 
 
+// Ex 2)
+
+// let fun_one = (arg1) => {
+//     console.log(arg1)                      //[Function: fun_param]
+//     console.log(arg1())                      //FaceBook 
+// }
+// function fun_param(){
+//     return "FaceBook"
+// }
+// fun_one(fun_param) 
+
+// Ex 3)
+// let fun_one = (arg1,arg2,arg3) => {
+//     console.log(arg1,arg2,arg3)     
+//    // [Function (anonymous)] [Function (anonymous)] [Function (anonymous)]                
+//     console.log(arg1(),arg2(),arg3())                //param1 param2 param3  
+    
+// }
+// fun_one(()=> "param1",()=> "param2",()=> "param3") 
+
+// Default parameter function
+
+// function one(arg1,arg2,arg3){
+//     console.log(arg1,arg2,arg3)        //undefined undefined undefined
+// }
+// one()
+
+// function one(arg1,arg2,arg3="zero"){
+//     console.log(arg1,arg2,arg3)        //one two zero
+// }
+// one("one","two")
+
+// function one(arg1="one",arg2,arg3="Three"){
+//     console.log(arg1,arg2,arg3)        //one undefined Three
+// }
+// one()
+
+
+// -------------------------------08-04-2024--------------------------------------
+
+// Rest Parameter in function
+// position of spread argument is always occure in last
+
+//ex 1)
+
+// function fun_one(...arg1){
+//     console.log(arg1)                       // [ 'hello1' ]
+//     console.log(typeof(arg1))              // object
+// }
+
+// fun_one("hello1")
+
+//ex 2)
+
+// function fun_one(arg1,...arg2){
+//     console.log(arg1,arg2)                    // Nirav [ 'shakshi', 'Parth' ]
+
+// }
+
+// fun_one("Nirav","shakshi","Parth")
+
+//ex 3)
+
+// function fun_one(arg1,arg2="Fine",...arg3){
+//     console.log(arg1,arg2,arg3)                   // Hello1 Fine [ 'Hello2', 'Hello3', 'Hello4' ]
+// }
+// fun_one("Hello1",undefined,"Hello2","Hello3","Hello4")
+
+
+// IIFE function
+// Immidiate Invokable Function Expression
+
+// Syntax (()=>{}())
+//ex 1)
+
+// ((arg1)=>{
+//     console.log(arg1)            //hello1
+// })("hello1")
+
+//ex 2)
+
+// ((arg1,arg2,arg3)=>{
+//     console.log(arg1,arg2,arg3)            //hello1 hello2 hello3
+// })("hello1","hello2","hello3")
+
+//ex 3)
+
+// ((arg1,arg2)=>{
+//     console.log(arg1,arg2)                  //[Function (anonymous)] Shakshi
+// })(()=>"Hii Niroo","Shakshi")
+
+//ex 4)
+
+// ((arg1,arg2)=>{
+//     console.log(arg1(),arg2)                  //Hii Niroo Shakshi
+// })(()=>{return "Hii Niroo"},"Shakshi")
+
+//ex 5)
+
+// ((arg1,arg2)=>{
+//     console.log(arg1(),arg2)                  //anonFunc hello1
+// })(
+//     ()=> "anonFunc",
+//     "hello1"
+// )
+
+// -------------------------------09-04-2024--------------------------------------
+
+// findIndex Function
+let ar1 = [5,10,8,130,44]
+
+let isLarge = (elem) => elem>9;
+
+console.log(ar1.findIndex(isLarge))
+
+// -------------------------------10-04-2024--------------------------------------
+
+let ar1 = [5,10,8,130,44]
+
+// console.log(ar1.findIndex((elem,idx) => elem>8 ))
+
+// console.log(ar1.findIndex((elem,idx) => {console.log(elem)} ))
+
+// console.log(
+//     ar1.findIndex((em,id) =>{
+//         console.log(id)
+//     })
+// )
+
+// console.log(
+//     ar1.findIndex((em,id) =>{
+//         return em<18
+//     })
+// )
+
+
+// -------------------------------13-04-2024--------------------------------------
+
+// flat function
+// The flat() method of Array instances creates a new array with all
+// sub-array elements concatenated into it recursively up to the specified
+// depth.
+
+// let ar1=[1,2,3,4]
+// console.log(ar1)
+
+// let ar1 = [[1,[2]],[[3],[4]]]
+
+// console.log(ar1.flat())        //[ 1, [ 2 ], [ 3 ], [ 4 ] ]     by default depth 1
+// console.log(ar1.flat(1))        //[ 1, [ 2 ], [ 3 ], [ 4 ] ]
+// console.log(ar1.flat(2))        // [ 1, 2, 3, 4 ]
+
+
+// for each function
+
+// let ar1 = [1,2,3,"four",5,6,7,8,9,10]
+
+// ar1.forEach((Element)=>{
+//     console.log(Element)
+// })
+// 1
+// 2
+// 3
+// four
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+
+// ar1.forEach((element,index)=>{
+//     console.log(index,"-",element)
+// })
+
+// 0 - 1
+// 1 - 2
+// 2 - 3
+// 3 - four
+// 4 - 5
+// 5 - 6
+// 6 - 7
+// 7 - 8
+// 8 - 9
+// 9 - 10
+
+// for of function
+// let ar1 = [1,2,3,"four",5,6,7,8,9,10]
+
+// for(let element of ar1){
+//     console.log(element)
+// }
+
+// for in function
+
+// let ar1 = {'1':'one','2':'two','3':'three'}
+
+// for(let key in ar1){
+//     console.log(key,ar1[key])
+// }
+
+// 1 one
+// 2 two
+// 3 three
+
+// -------------------------------20-04-2024--------------------------------------
+
+// function add(num,callBack){
+//     return callBack(num+5)
+// }
+// function sub(num,callBack){
+//     return callBack(num-2)
+// }
+// function mul(num,callBack){
+//     return callBack(num*5)
+// }
+// function div(num,callBack){
+//     return callBack(num/2)
+// }
+
+// add(5,(addRes)=>{
+//     console.log(addRes)
+//     sub(addRes,(subRes)=>{
+//         console.log(subRes)
+//         mul(subRes,(mulRes)=>{
+//             console.log(mulRes)
+//             div(mulRes,(divRes)=>{
+//                 console.log(divRes)
+//             })
+//         })
+//     })
+// })
+
+
+// -------------------------------20-04-2024--------------------------------------
+
+let stock = {
+    fruit : ["apple","banana","strawberry"],
+    liquid : ["water","ice"],
+    holder : ["cone","stick","cup"],
+    toppines : ["chocolate","peanuts"]
+}
+let order = (call_production) =>{
+    setTimeout(() => {
+    console.log("order placed. please call production");
+    console.log(`${stock.fruit[1]} fruit selected`)
+    call_production();
+    }, 1000);
+    
+}
+
+let production = () =>{
+    console.log("production has started");
+    setTimeout(() => {
+        console.log("the fruit has been chopped");
+        setTimeout(() => {
+            console.log(`${stock.liquid[1]} is added`);
+            setTimeout(() => {
+                console.log("Machine has started");
+                setTimeout(() => {
+                    console.log(`ice cream has placed on ${stock.holder[1]}`);
+                    setTimeout(() => {
+                        console.log(`${stock.toppines[1]} is selected`);
+                        setTimeout(() => {
+                            console.log("ice cream is ready to serve")
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+}
+
+order(production)
+
+// -------------------------------23-04-2024--------------------------------------
+
+
+let stock = {
+    fruit : ["apple","banana","strawberry"],
+    liquid : ["water","ice"],
+    holder : ["cone","stick","cup"],
+    toppines : ["chocolate","peanuts"]
+}
+
+let is_open = true;
+let order = (time,work) => {
+    return new Promise((resolve,reject)=>{
+        if(is_open){
+            setTimeout(() => {
+                resolve(work())
+            }, time);
+        }
+        else{
+            reject(console.log("shop is closed"));
+        }
+    })
+}
+
+order(1000,()=> console.log(`${stock.fruit[1]} fruit selected`))
+.then(()=> order(1000,()=> console.log("the fruit has been chopped")))
+.then(()=> order(1000,()=> console.log(`${stock.liquid[1]} is added`)))
+.then(()=> order(1000,()=> console.log("Machine has started")))
+.then(()=> order(1000,()=> console.log(`ice cream has placed on ${stock.holder[1]}`)))
+.then(()=> order(1000,()=> console.log(`${stock.toppines[1]} is selected`)))
+.then(()=> order(1000,()=> console.log("ice creame is served")))
