@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <tr>
+        <td>P=<input type="text" id="num1"></td>
+        <td>R=<input type="text" id="num2"></td>
+        <td>N=<input type="text" id="num3"></td>
+
+        <button type="button" onclick="mysimple()">SI</button>
+        <button type="button" onclick="mycompound()">CI</button>
+
+        <td>Total=<input type="text" id="num4"></td>
+
+    </tr>
+
+    <script>
+        function mysimple()
+        {
+            let p = document.getElementById("num1").value;
+            let r = document.getElementById("num2").value;
+            let n = document.getElementById("num3").value;
+
+            document.getElementById("num4").value = parseInt(p)*parseInt(r)*parseInt(n)/100;
+        }
+        function mycompound()
+        {
+            let p = document.getElementById("num1").value;
+            let r = document.getElementById("num2").value;
+            let n = document.getElementById("num3").value;
+
+            document.getElementById("num4").value = parseInt(p)*(1+parseInt(r)/parseInt(n));
+        }
+    </script>
+</body>
+</html>

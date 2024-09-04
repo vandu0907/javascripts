@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">My Event</h1>
+    <button type="button" onmousedown="mousedown()" onmouseup="mouseup()">Click</button>
+
+
+    <script>
+        function mousedown()
+        {
+            document.getElementById("demo").innerHTML="The mouse button is held down.";
+        }
+        function mouseup()
+        {
+            document.getElementById("demo").innerHTML="You released the mouse button."
+        }
+    </script>
+
+</body>
+</html>
